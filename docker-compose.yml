@@ -20,12 +20,12 @@ services:
     volumes:
       - "./:/var/www/html" # Sync dir with container dir 
     ports:
-      - 8000:80
+      - 8080:80
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
-      - 8001:80
+      - 8080:80
     environment:
       - PMA_HOST=db # Grabs variables from the "db" service
       - PMA_PORT=3306 # Default value
